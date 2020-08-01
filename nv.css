@@ -1,0 +1,16 @@
+
+p {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+path { 
+    fill: none;
+    stroke-width: 3;
+    stroke: black;
+}
+
+.data-point {
+    fill: white;
+    stroke-width: 1px;
+}

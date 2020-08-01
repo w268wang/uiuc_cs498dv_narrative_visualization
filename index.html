@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>CS 498 Project: Narrative Visualization (2020)</title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link href="nv.css" rel="stylesheet" type="text/css">
+    </head>
+
+<body>
+    <div id="page1" height="200px">
+        <h2>Page 1. World GDP per capita vs Research expenditure</h2>
+        <p>
+            Here, you can see the average GDP per capita and Research Expenditure (ratio of total GDP) in this world from 1990 to 2020.<br/>Here is my assumption: the speed of GDP per capitai increasing would be higher (compared to world wide average) if RE spend is higher.<br/>
+            Data provided by <a href="https://www.worldbank.org/"><b>The World Bank</b></a> (<a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2019&locations=1W&start=1990">GDP per capita</a>, <a href="https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS?end=2019&locations=1W&start=1990">Research expenditure</a>)
+        </p>
+        <p><div id="gt_page2"><a href="#">Go to the <b>next</b> page -></a></div></p>
+    </div>
+
+    <div id="page2" height="200px" style="display:none">
+        <h2>Page 2. </h2>
+        <p>
+            Here, you can see the GDP per capita and Research expenditure (ratio of total GDP) for <b>US</b> from 1990 to 2020.<br/>The assumption <b>holds</b> :D. GDP per capita in US increased rapidly over the years due to a constantly high Research investment ratio.<br/><br/>
+        </p>
+        <p><div id="gt_page3"><a href="#">Go to the <b>next</b> page -></a></div></p>
+    </div>
+
+    <div id="page3" height="200px" style="display:none">
+        <h2>Page 3. </h2>
+        <p>
+            Let' turn our attemption to another developped country in North America: <b>Canada</b>.<br/>The assumption <b>kinda holds</b> :). As that 2002-2008 increased aligned with the worldwide trend when Canada spent around 2% GDP into research.<br/> Also, We can actually see that GDP per capita in Canada stopped increasing starting 2008 when its Research investment ratio dropped to around 1.5%.
+        </p>
+        <p><div id="gt_page4"><a href="#">Go to the <b>next</b> page -></a></div></p>
+    </div>
+
+    <div id="page4" height="200px" style="display:none">
+        <h2>Page 4. </h2>
+        <p>
+            Now, let's check the largest developping country today in the world: <b>China</b>.<br/>The assumption still <b>kinda holds</b> :). As China's GDP per capita growth before 2008 is low compared to the worldwide trend when it spent lower than 2% GDP into research.<br/> But the GDP pp growth rate kept increasing as it spent more in research (especially after 2016).
+        </p>
+        <p><div id="gt_page5"><a href="#">Go to the <b>next</b> page -></a></div></p>
+    </div>
+
+    <div id="page5" height="200px" style="display:none">
+        <h2>Now it's your turn</h2>
+        <p>
+            Feel free to select any region/country in the dropdown and check the assumption for yourself!<br/>
+            Thank you for your time to go through this little presentation.<br/>
+            You can go back by clicking on "Go back to the beginning" button.
+        </p>
+        <p><div id="gt_page1"><a href="#"><<= Go back to the beginning</a></div></p>
+        <div id="country_dropdown"></div>
+    </div>
+    
+    <div width="1000" height="650px">
+        <svg id="main-chart"></svg>
+    </div>
+    
+    <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.0/d3-tip.min.js"></script>
+    <script src="nv.js" charset="utf-8"></script>
+
+    <div id="legends">
+        <p>Legends: <b>Square</b> (▢) means <b>Research Expenditure</b> (right Y axis) and <b>Circle</b> (○) means <b>GDP per capita</b> (left Y axis)</p><br/>
+        <b>Color Legends For Countries/Regions:</b><br/>
+    </div>
+</body>
+</html>
